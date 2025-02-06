@@ -1,36 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<a id="readme-top"></a>
+
+<div align="center">
+  <h3 align="center">Où sont les frites?</h3>
+  <hr>
+
+  <p align="center">
+    Your essential guide to finding the best french fries on EPFL campus
+    <br />
+    <a href="https://github.com/epfl-fsd/ousontlesfrites"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://ousontlesfrites.epfl.ch">View Website</a>
+    ·
+    <a href="https://github.com/epfl-fsd/ousontlesfrites/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    ·
+    <a href="https://github.com/epfl-fsd/ousontlesfrites/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
+
+## About The Project
+
+Où sont les frites? is the definitive application for locating french fries across EPFL's campus. Whether you're a student rushing between classes, a researcher on lunch break, or a visitor exploring the campus, our app helps you find the nearest spot serving fresh, hot fries.
+
+### Key Features
+
+-   Real-time availability of fries at all campus restaurants and food trucks
+-   Daily menu integration with campus restaurants
+-   Queue time estimates during peak hours
+-   Price comparison between different campus locations
+-   Rating system for fries quality and portion size
+-   Special offers and "fries of the day" notifications
+-   Filter by location (Esplanade, Quartier Nord, Satellight, etc.)
+-   Opening hours and lunch rush hours information
+
+### Built With
+
+Our application leverages modern web technologies to provide the best user experience:
+
+-   [![Next][Next.js]][Next-url] - React framework for production
+-   [![React][React.js]][React-url] - UI component library
+-   [![Tailwind][Tailwind.css]][Tailwind-url] - Utility-first CSS framework
 
 ## Getting Started
 
-First, run the development server:
+This guide is divided into two sections:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+-   **Production Deployment**: For users who want to run the application
+-   **Development Setup**: For developers who want to contribute to the project
+
+## Production Deployment
+
+### Prerequisites
+
+-   Docker
+
+### Environment Variables
+
+Create a `.env` file with the following required variables:
+
+```env
+# API Configuration (Required)
+API_USERNAME=XXXXXXXXXXXXXXX  # Your API username
+API_PASSWORD=XXXXXXXXXXXXXXX  # Your API password
+API_URL=XXXXXXXXXXXXXXX      # API endpoint URL
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Pull the image from GitHub Container Registry:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```sh
+    docker pull ghcr.io/epfl-fsd/ousontlesfrites:latest
+    ```
 
-## Learn More
+2. Run the container:
 
-To learn more about Next.js, take a look at the following resources:
+    ```sh
+    docker run -d \
+      --name ousontlesfrites \
+      -p 3000:3000 \
+      --env-file .env \
+      ghcr.io/epfl-fsd/ousontlesfrites:latest
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Access the application at [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Managing the Container
 
-## Deploy on Vercel
+Stop the container:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+docker stop ousontlesfrites
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Start an existing container:
+
+```sh
+docker start ousontlesfrites
+```
+
+Remove the container:
+
+```sh
+docker rm ousontlesfrites
+```
+
+## Development Setup
+
+### Prerequisites
+
+-   Node.js (version 20 or higher)
+-   npm
+-   Docker (optional, for local container testing)
+
+### Local Development
+
+1. Clone the repository
+
+    ```sh
+    git clone https://github.com/epfl-fsd/ousontlesfrites.git
+    ```
+
+2. Install dependencies
+
+    ```sh
+    npm install
+    ```
+
+3. Create `.env` file with required variables (see Production section)
+
+4. Start development server
+
+    ```sh
+    npm run dev
+    ```
+
+5. Access [http://localhost:3000](http://localhost:3000)
+
+### Docker Development
+
+Build a local Docker image:
+
+```sh
+docker build -t ousontlesfrites-dev .
+```
+
+Run the development image:
+
+```sh
+docker run -d \
+  --name ousontlesfrites-dev \
+  -p 3000:3000 \
+  --env-file .env \
+  ousontlesfrites-dev
+```
