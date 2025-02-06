@@ -1,5 +1,10 @@
 {
   "Home": {
-    "welcome": "Home"
+    "error": {
+      "notFound": "Menus not found",
+      "problem": "An issue has occurred.",
+      "noMenus": "No menus available",
+      "tryAgain": "Try to come back tomorrow."
+    }
   }
 }
