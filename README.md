@@ -62,7 +62,7 @@ Create a `.env` file with the following required variables:
 # API Configuration (Required)
 API_USERNAME=XXXXXXXXXXXXXXX  # Your API username
 API_PASSWORD=XXXXXXXXXXXXXXX  # Your API password
-API_URL=XXXXXXXXXXXXXXX      # API endpoint URL
+API_URL=XXXXXXXXXXXXXXX       # API endpoint URL
 ```
 
 ### Quick Start
