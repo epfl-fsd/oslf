@@ -24,7 +24,7 @@ export const MenuItem: React.FC<{ menu: Menu }> = ({ menu }) => {
 				<div className="flex items-center space-x-4">
 					<DollarSign className="text-green-500 w-6 h-6" />
 					<span className="text-lg font-semibold">
-						{meal.prices[0].price} {meal.prices[0].currency}
+						{meal.prices[0].price} {meal.prices[0].currency.toUpperCase()}
 					</span>
 				</div>
 
