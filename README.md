@@ -37,9 +37,9 @@ Où sont les frites? is the definitive application for locating french fries acr
 
 Our application leverages modern web technologies to provide the best user experience:
 
--   [![Next][Next.js]][Next-url] - React framework for production
--   [![React][React.js]][React-url] - UI component library
--   [![Tailwind][Tailwind.css]][Tailwind-url] - Utility-first CSS framework
+[![Next][Next.js]][Next-url]
+[![React][React.js]][React-url]
+[![Tailwind][Tailwind.css]][Tailwind-url]
 
 ## Getting Started
 
@@ -154,3 +154,12 @@ docker run -d \
   --env-file .env \
   ousontlesfrites-dev
 ```
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Tailwind.css]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwindcss.com/
