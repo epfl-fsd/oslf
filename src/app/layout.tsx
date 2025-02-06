@@ -9,8 +9,15 @@ import { Header } from '@/components/header';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'OUSONLESFRITES',
+	title: 'OUSONTLESFRITES',
 	description: 'Best way to find the best fries',
+	icons: {
+		icon: [
+			{
+				url: 'https://epfl-si.github.io/elements/svg/epfl-logo.svg',
+			},
+		],
+	},
 };
 
 export default async function RootLayout({
