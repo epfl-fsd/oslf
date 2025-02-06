@@ -37,7 +37,9 @@ export const MenuItem: React.FC<{ menu: Menu }> = ({ menu }) => {
 
 				<div className="flex items-center space-x-4">
 					<MapPin className="text-red-400 w-6 h-6" />
-					<span className="text-sm text-gray-600">{menu.cafeteria.address}</span>
+					<Link href={menu.cafeteria.urlLocation}>
+						<span className="text-sm text-gray-600 hover:underline">{menu.cafeteria.address}</span>
+					</Link>
 				</div>
 			</CardContent>
 		</Card>
