@@ -30,7 +30,7 @@ Où sont les frites? is the definitive application for locating french fries acr
 -   Price comparison between different campus locations
 -   Rating system for fries quality and portion size
 -   Special offers and "fries of the day" notifications
--   Filter by location (Esplanade, Quartier Nord, Satellight, etc.)
+-   Filter by location (Esplanade, Quartier Nord, Satellite, etc.)
 -   Opening hours and lunch rush hours information
 
 ### Built With
