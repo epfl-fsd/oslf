@@ -18,7 +18,7 @@ export async function getMenus(): Promise<Menu[] | null> {
 		}
 
 		const cafeterias: Cafeteria[] = await response.json();
-		const words = ['fries', 'frite'];
+		const words = ['fries', 'frite', 'frites'];
 
 		const locale = await getUserLocale();
 
