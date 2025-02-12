@@ -4,6 +4,7 @@ import { getLocale, getMessages } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+export const dynamic = 'force-dynamic';
 import { Header } from '@/components/header';
 
 const inter = Inter({ subsets: ['latin'] });
