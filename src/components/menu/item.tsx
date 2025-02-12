@@ -30,16 +30,24 @@ export const MenuItem: React.FC<{ menu: Menu }> = ({ menu }) => {
 
 				<div className="flex items-center space-x-4">
 					<Store className="text-blue-500 w-6 h-6" />
-					<Link href={menu.cafeteria.urlSite}>
-						<span className="text-lg font-medium hover:underline">{menu.cafeteria.name}</span>
-					</Link>
+					{menu.cafeteria.urlSite ? (
+						<Link href={menu.cafeteria.urlSite}>
+							<span className="text-lg font-medium hover:underline">{menu.cafeteria.name}</span>
+						</Link>
+					) : (
+						<span className="text-lg font-medium">{menu.cafeteria.name}</span>
+					)}
 				</div>
 
 				<div className="flex items-center space-x-4">
 					<MapPin className="text-red-400 w-6 h-6" />
-					<Link href={menu.cafeteria.urlLocation}>
-						<span className="text-sm text-gray-600 hover:underline">{menu.cafeteria.address}</span>
-					</Link>
+					{menu.cafeteria.urlLocation ? (
+						<Link href={menu.cafeteria.urlLocation}>
+							<span className="text-sm text-gray-600 hover:underline">{menu.cafeteria.address}</span>
+						</Link>
+					) : (
+						<span className="text-sm text-gray-600">{menu.cafeteria.address}</span>
+					)}
 				</div>
 			</CardContent>
 		</Card>
