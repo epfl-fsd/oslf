@@ -6,6 +6,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 export const dynamic = 'force-dynamic';
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,20 +22,17 @@ export const metadata: Metadata = {
 	},
 };
 
-export default async function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	const locale = await getLocale();
 	const messages = await getMessages();
 
 	return (
-		<html lang={locale}>
-			<body className={cn('antialiased h-full', inter.className)}>
+		<html lang={locale} className="h-full">
+			<body className={cn('antialiased h-full flex flex-col', inter.className)}>
 				<NextIntlClientProvider messages={messages}>
 					<Header />
-					{children}
+					<div className="flex-grow">{children}</div>
+					<Footer />
 				</NextIntlClientProvider>
 			</body>
 		</html>
