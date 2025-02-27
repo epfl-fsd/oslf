@@ -9,7 +9,7 @@ export const MenuItem: React.FC<{ menu: Menu }> = ({ menu }) => {
 	const mainCourse = meal.items.find((item) => item.menuSection === 'mainCourse')?.recipe;
 
 	return (
-		<Card className="w-full mx-auto shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-none border-0">
+		<Card className="w-full mx-auto shadow-lg transition-shadow duration-300 rounded-none border-0">
 			<CardContent className="p-4 md:p-6 space-y-4">
 				{mainCourse && (
 					<div className="flex flex-row items-start sm:space-x-4 space-x-2 bg-gray-50 p-2 sm:p-4 rounded-md shadow-sm">
