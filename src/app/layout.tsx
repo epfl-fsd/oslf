@@ -10,7 +10,7 @@ import { Header } from '@/components/header';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'OUSONTLESFRITES',
+	title: 'OÙSONTLESFRITES',
 	description: 'Best way to find the best fries',
 	icons: {
 		icon: [

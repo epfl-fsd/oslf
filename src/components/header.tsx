@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
 			<div className="flex items-center gap-2 sm:gap-4 p-1 sm:p-3">
 				<img src="https://epfl-si.github.io/elements/svg/epfl-logo.svg" alt="LOGO" className="h-3 sm:h-7" />
 				<span className="border-l-2 border-solid sm:h-6 h-4 w-1 border-gray-300"></span>
-				<h1 className="text-base sm:text-2xl font-semibold -ml-1 sm:ml-0">OSLF</h1>
+				<h1 className="text-base sm:text-2xl font-semibold -ml-1 sm:ml-0">OÙSONTLESFRITES</h1>
 			</div>
 			<div className="flex items-center gap-2 sm:gap-4">
 				<LanguageSelector />
