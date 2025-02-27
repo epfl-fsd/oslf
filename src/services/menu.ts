@@ -16,7 +16,6 @@ export async function getMenus(): Promise<Menu[] | null> {
 			console.error('Error fetching menus:', response.statusText);
 			return null;
 		}
-
 		const cafeterias: Cafeteria[] = await response.json();
 		const words = ['fries', 'frite', 'frites'];
 
@@ -33,6 +32,7 @@ export async function getMenus(): Promise<Menu[] | null> {
 						recipe: {
 							...item.recipe,
 							name: item.recipe.name_en ? (locale === 'en' ? item.recipe.name_en : item.recipe.name) : item.recipe.name,
+							originalName: item.recipe.name,
 						},
 					})),
 				})),
@@ -47,7 +47,7 @@ export async function getMenus(): Promise<Menu[] | null> {
 			}))
 		);
 
-		const filteredMenus = menus.filter((menu) => menu.meals?.some((meal) => meal.items?.some((item) => item.recipe?.name && words.some((word) => item.recipe.name.toLowerCase().includes(word)))));
+		const filteredMenus = menus.filter((menu) => menu.meals?.some((meal) => meal.items?.some((item) => item.recipe?.originalName && words.some((word) => item.recipe.originalName.toLowerCase().includes(word)))));
 
 		return filteredMenus;
 	} catch (error) {
