@@ -17,7 +17,7 @@ export const MenuList: React.FC<{ menus: Menu[] | null }> = ({ menus }) => {
 	}
 
 	return (
-		<div className="text-primary-secondary space-y-3 mx-auto md:w-[60%] sm:w-[80%] w-full py-2 px-3 items-center justify-between">
+		<div className="text-primary-secondary sm:space-y-3 mx-auto md:w-[60%] sm:w-[80%] w-full py-2 px-3 items-center justify-between">
 			{menus.map((menu, index) => (
 				<MenuItem key={index} menu={menu} />
 			))}
