@@ -6,5 +6,8 @@
       "noMenus": "No menus available",
       "tryAgain": "Try to come back tomorrow."
     }
+  },
+  "Header": {
+    "title": "WHERETHEFRIES"
   }
 }
