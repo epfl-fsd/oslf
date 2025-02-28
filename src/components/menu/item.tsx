@@ -32,7 +32,7 @@ export const MenuItem: React.FC<{ menu: Menu }> = ({ menu }) => {
 					<div className="flex items-center space-x-3">
 						<Store className="text-blue-500 w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
 						{menu.cafeteria.urlSite ? (
-							<Link href={menu.cafeteria.urlSite} className="min-w-0">
+							<Link href={menu.cafeteria.urlSite} target="_blank" className="min-w-0">
 								<span className="text-sm md:text-lg font-medium v hover:underline break-words line-clamp-1">{menu.cafeteria.name}</span>
 							</Link>
 						) : (
@@ -44,7 +44,7 @@ export const MenuItem: React.FC<{ menu: Menu }> = ({ menu }) => {
 				<div className="flex items-center space-x-3">
 					<MapPin className="text-red-400 w-5 h-5 md:w-6 md:h-6 flex-shrink-0 mt-1" />
 					{menu.cafeteria.urlLocation ? (
-						<Link href={menu.cafeteria.urlLocation}>
+						<Link href={menu.cafeteria.urlLocation} target="_blank" className="min-w-0">
 							<span className="text-xs md:text-sm text-gray-600 hover:underline break-words">{menu.cafeteria.address}</span>
 						</Link>
 					) : (
