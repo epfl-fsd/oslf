@@ -24,7 +24,13 @@ export const MenuItem: React.FC<{ menu: Menu }> = ({ menu }) => {
 					<div className="col-span-3 col-start-1 flex">
 						<DollarSign className="inline-block w-5 h-5 text-green-500" />
 						<span className="text-sm font-semibold">
-							{meal.prices[0].price} {meal.prices[0].currency.toUpperCase()}
+							{meal.prices ? (
+								<>
+									{meal.prices[0].price} {meal.prices[0].currency.toUpperCase()}
+								</>
+							) : (
+								<span className="text-sm text-gray-500">Price not available</span>
+							)}
 						</span>
 					</div>
 
@@ -56,7 +62,13 @@ export const MenuItem: React.FC<{ menu: Menu }> = ({ menu }) => {
 						<div className="flex items-center gap-3">
 							<DollarSign className="flex-shrink-0 w-6 h-6 text-green-500" />
 							<span className="text-lg font-semibold">
-								{meal.prices[0].price} {meal.prices[0].currency.toUpperCase()}
+								{meal.prices ? (
+									<>
+										{meal.prices[0].price} {meal.prices[0].currency.toUpperCase()}
+									</>
+								) : (
+									<span className="text-sm text-gray-500">Price not available</span>
+								)}
 							</span>
 						</div>
 
